@@ -5,6 +5,7 @@ const knex = require("knex");
 const bookshelf = require("./db/models/bookshelf");
 const methodOverride = require("method-override");
 
+const session = require("express-session");
 const RedisStore = require("connect-redis")(session);
 const passport = require("passport");
 
