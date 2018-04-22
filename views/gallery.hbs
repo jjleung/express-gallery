@@ -1,0 +1,15 @@
+<h1>Just Human Things</h1>
+<ul>
+    {{#each allPics}}
+    <li>
+        <a href="/gallery/{{gallery_id}}">
+            <img src="{{imgUrl}}" alt="{{title}}">
+        </a>
+        <h2>{{title}}</h2>
+        <h3>{{description}}</h3>
+    </li>
+    {{/each}}
+</ul>
+
+<a href="/gallery/new">Add Picture</a>
+<a href="/login/">Change User</a>
