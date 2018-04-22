@@ -5,7 +5,7 @@ const knex = require("knex");
 const bookshelf = require("./db/models/bookshelf");
 const methodOverride = require("method-override");
 
-const RedisStore = require("connect-redis")(session);
+// const RedisStore = require("connect-redis")(session);
 const passport = require("passport");
 
 const hbs = require("express-handlebars");
@@ -30,14 +30,14 @@ app.set("view engine", ".hbs");
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use(
-  session({
-    store: new RedisStore(),
-    secret: "ennui",
-    resave: false,
-    saveUninitialized: true
-  })
-);
+// app.use(
+//   session({
+//     store: new RedisStore(),
+//     secret: "ennui",
+//     resave: false,
+//     saveUninitialized: true
+//   })
+// );
 
 app.use(
   methodOverride((req, res) => {
